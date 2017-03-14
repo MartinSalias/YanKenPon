@@ -10,7 +10,17 @@ class Juego
 		if @jugador1==nil and @jugador2==nil
 			@mostrar="Inicio"
 		else
-			@mostrar="Empate"
+			if @jugador1==@jugador2
+				@mostrar="Empate"
+			else
+				if (@jugador1="Y" and @jugador2="P")
+					@mostrar="Gana Jugador 1"
+				else 
+					if (@jugador1="P" and @jugador2="Y")
+						@mostrar="Gana Jugador 2"
+					end
+				end
+			end
 		end
 	end
 
