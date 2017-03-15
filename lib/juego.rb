@@ -21,7 +21,6 @@ class Juego
 			return @mostrar="Gana Jugador 2"
 		end
 	end
-
 	def setjugador1 valor
 		@jugador1=valor
 	end
@@ -33,7 +32,6 @@ class Juego
 	def getjugador1
 		return @jugador1
 	end
-
 	def getjugador2
 		return @jugador2
 	end
