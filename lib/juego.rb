@@ -30,6 +30,13 @@ class Juego
 		@jugador2=valor
 	end
 
+	def getjugador1
+		return @jugador1
+	end
+
+	def getjugador2
+		return @jugador2
+	end
 
 end
 
