@@ -28,37 +28,37 @@ describe "Yan Ken Pon" do
 		juego = Juego.new
 		juego.setjugador1("Y")
 		juego.setjugador2("P")
-		juego.mostrar.should == "Gana Jugador 1"
+		juego.mostrar.should == "GANASTE"
 	end
 	it "Jugador A es Tijera y B es Piedra " do
 		juego1 = Juego.new
 		juego1.setjugador1("P")
 		juego1.setjugador2("Y")
-		juego1.mostrar.should == "Gana Jugador 2"
+		juego1.mostrar.should == "PERDISTE"
 	end
 	it "Jugador A es Papel y B es Tijera " do
 		juego = Juego.new
 		juego.setjugador1("K")
 		juego.setjugador2("P")
-		juego.mostrar.should == "Gana Jugador 2"
+		juego.mostrar.should == "PERDISTE"
 	end
 	it "Jugador A es Tijera y B es Papel " do
 		juego = Juego.new
 		juego.setjugador1("P")
 		juego.setjugador2("K")
-		juego.mostrar.should == "Gana Jugador 1"
+		juego.mostrar.should == "GANASTE"
 	end
 	it "Jugador A es Piedra y B es Papel " do
 		juego = Juego.new
 		juego.setjugador1("Y")
 		juego.setjugador2("K")
-		juego.mostrar.should == "Gana Jugador 2"
+		juego.mostrar.should == "PERDISTE"
 	end
 	it "Jugador A es Papel y B es Piedra " do
 		juego = Juego.new
 		juego.setjugador1("K")
 		juego.setjugador2("Y")
-		juego.mostrar.should == "Gana Jugador 1"
+		juego.mostrar.should == "GANASTE"
 	end
 
 	it "tiro 25 veces y me da valores diferentes" do
