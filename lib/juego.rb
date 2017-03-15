@@ -5,6 +5,8 @@ class Juego
 		@jugador2=nil
 		@proxima_jugada=""
 		@mostrar="Inicio"
+		@valores= ["Y", "K", "P"]
+
 	end
 
 	def setjugador1 valor
@@ -33,35 +35,27 @@ class Juego
 
 	def jugadarandom
 		azar = Random.rand (3)
-		if azar == 0
-	  	@jugador2 = "Y"
-		elsif azar == 1
-	  	@jugador2 = "K"
-		elsif azar == 2
-	  	@jugador2 = "P"
-		end
+		@jugador2 = @valores[azar]
 	end
 
 	def mostrar
+
 		if @jugador1==nil and @jugador2==nil
-			return @mostrar="Inicio"
+			return "Inicio"
 		else
 			if @jugador1==@jugador2
-				return @mostrar="Empate"
+				return "Empate"
 			end
 		end
 
 		if (@jugador1=="Y" and @jugador2=="P") or (@jugador1=="K" and @jugador2=="Y") or (@jugador1=="P" and @jugador2=="K")
-			return @mostrar="Gana Jugador 1"
+			return "Gana Jugador 1"
 		end 
 
-
 		if (@jugador1=="P" and @jugador2=="Y") or (@jugador1=="K" and @jugador2=="P") or (@jugador1=="Y" and @jugador2=="K")
-			return @mostrar="Gana Jugador 2"
+			return "Gana Jugador 2"
 		end
 	end
-
-
 
 end
 
