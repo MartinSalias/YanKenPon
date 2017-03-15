@@ -17,7 +17,18 @@ describe "Yan Ken Pon" do
 		juego.setjugador1("Y")
 		juego.setjugador2("P")
 		juego.mostrar.should == "Gana Jugador 1"
-
+	end
+	it "Jugador A es Tijera y B es Piedra " do
+		juego1 = Juego.new
+		juego1.setjugador1("P")
+		juego1.setjugador2("Y")
+		juego1.mostrar.should == "Gana Jugador 2"
+	end
+	it "Jugador A es Papel y B es Tijera " do
+		juego2 = Juego.new
+		juego2.setjugador1("K")
+		juego2.setjugador2("P")
+		juego2.mostrar.should == "Gana Jugador 2"
 	end
 
 end

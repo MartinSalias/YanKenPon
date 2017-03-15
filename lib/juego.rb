@@ -8,19 +8,17 @@ class Juego
 
 	def mostrar
 		if @jugador1==nil and @jugador2==nil
-			@mostrar="Inicio"
+			return @mostrar="Inicio"
 		else
 			if @jugador1==@jugador2
-				@mostrar="Empate"
-			else
-				if (@jugador1="Y" and @jugador2="P")
-					@mostrar="Gana Jugador 1"
-				else 
-					if (@jugador1="P" and @jugador2="Y")
-						@mostrar="Gana Jugador 2"
-					end
-				end
+				return @mostrar="Empate"
 			end
+		end
+		if (@jugador1=="Y" and @jugador2=="P")
+			return @mostrar="Gana Jugador 1"
+		end 
+		if (@jugador1=="P" and @jugador2=="Y") or (@jugador1=="K" and @jugador2=="P")
+			return @mostrar="Gana Jugador 2"
 		end
 	end
 
