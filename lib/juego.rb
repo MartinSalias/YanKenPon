@@ -14,10 +14,10 @@ class Juego
 				return @mostrar="Empate"
 			end
 		end
-		if (@jugador1=="Y" and @jugador2=="P")
+		if (@jugador1=="Y" and @jugador2=="P") or (@jugador1=="K" and @jugador2=="Y") or (@jugador1=="P" and @jugador2=="K")
 			return @mostrar="Gana Jugador 1"
 		end 
-		if (@jugador1=="P" and @jugador2=="Y") or (@jugador1=="K" and @jugador2=="P")
+		if (@jugador1=="P" and @jugador2=="Y") or (@jugador1=="K" and @jugador2=="P") or (@jugador1=="Y" and @jugador2=="K")
 			return @mostrar="Gana Jugador 2"
 		end
 	end
