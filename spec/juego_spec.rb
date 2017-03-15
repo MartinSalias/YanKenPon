@@ -37,28 +37,49 @@ describe "Yan Ken Pon" do
 		juego1.mostrar.should == "Gana Jugador 2"
 	end
 	it "Jugador A es Papel y B es Tijera " do
-		juego2 = Juego.new
-		juego2.setjugador1("K")
-		juego2.setjugador2("P")
-		juego2.mostrar.should == "Gana Jugador 2"
+		juego = Juego.new
+		juego.setjugador1("K")
+		juego.setjugador2("P")
+		juego.mostrar.should == "Gana Jugador 2"
 	end
 	it "Jugador A es Tijera y B es Papel " do
-		juego2 = Juego.new
-		juego2.setjugador1("P")
-		juego2.setjugador2("K")
-		juego2.mostrar.should == "Gana Jugador 1"
+		juego = Juego.new
+		juego.setjugador1("P")
+		juego.setjugador2("K")
+		juego.mostrar.should == "Gana Jugador 1"
 	end
 	it "Jugador A es Piedra y B es Papel " do
-		juego2 = Juego.new
-		juego2.setjugador1("Y")
-		juego2.setjugador2("K")
-		juego2.mostrar.should == "Gana Jugador 2"
+		juego = Juego.new
+		juego.setjugador1("Y")
+		juego.setjugador2("K")
+		juego.mostrar.should == "Gana Jugador 2"
 	end
 	it "Jugador A es Papel y B es Piedra " do
-		juego2 = Juego.new
-		juego2.setjugador1("K")
-		juego2.setjugador2("Y")
-		juego2.mostrar.should == "Gana Jugador 1"
+		juego = Juego.new
+		juego.setjugador1("K")
+		juego.setjugador2("Y")
+		juego.mostrar.should == "Gana Jugador 1"
+	end
+
+	it "tiro 25 veces y me da valores diferentes" do
+		juego = Juego.new
+		tiros = Array.new 25
+
+		25.times do |numero|
+			juego.jugadarandom
+			tiros[numero] = juego.getjugador2
+		end
+
+		iguales = true
+		tiro1 = tiros[0]
+		tiros.each do |este_tiro|
+			if este_tiro != tiro1
+				iguales = false
+				break
+			end
+		end
+
+		iguales.should == false
 	end
 
 end
