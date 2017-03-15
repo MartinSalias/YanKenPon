@@ -36,7 +36,7 @@ class Juego
 	def jugadarandom
 		azar = Random.rand (3)
 		@jugador2 = @valores[azar]
-	end
+			end
 
 	def mostrar
 
