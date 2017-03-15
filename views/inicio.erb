@@ -3,21 +3,26 @@ Bienvenido a YanKenPon  <%= @nombre %>
 </h1>
 
 
-
+<img src="/Image/piedra-papel-tijera.jpg" width="170">
 
 <form method="post" action="/inicio" name="form1">
 
 <p>
-Ingrese valor <input type="text" name="j1">
+Seleccione un valor
 <p>
-
-
+  <input type="radio" name="j1" id="Y" value="Y"> Piedra <br>
+  <input type="radio" name="j1" id="K" value="K"> Papel <br>
+  <input type="radio" name="j1" id="P" value="P"> Tijera <br>
 <p>
 <input type="submit" value="Jugar"> 
 </p>
 
 <p>
-Valor seleccionado J2:  <u> <%= @seleccionj2 %> </u>
+Tu seleccion:  <u> <%= @seleccionj1 %> </u>
+</p>
+
+<p>
+Valor seleccionado CPU:  <u> <%= @seleccionj2 %> </u>
 </p>
 
 <p>

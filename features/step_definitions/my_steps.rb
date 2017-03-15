@@ -8,7 +8,8 @@ end
 
 
 When(/^persona elige "(.*?)"$/) do |opcion|
-	fill_in("j1", :with => opcion)
+	#fill_in("j1", :with => opcion)
+	choose(opcion)
 end
 
 When(/^computadora tira "(.*?)"$/) do |opcion|
