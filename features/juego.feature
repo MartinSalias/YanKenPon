@@ -14,14 +14,14 @@ Scenario: verifica empate
  And computadora tira "Y"
  Then debo ver "Empate"
 
-Scenario: verifica Gana Jugador 1
+Scenario: verifica GANASTE
  Given titulo
  When persona elige "Y"
  And computadora tira "P"
- Then debo ver "Gana Jugador 1"
+ Then debo ver "GANASTE"
 
-Scenario: verifica Gana Jugador 2
+Scenario: verifica PERDISTE
  Given titulo
  When persona elige "Y"
  And computadora tira "K"
- Then debo ver "Gana Jugador 2"
+ Then debo ver "PERDISTE"
