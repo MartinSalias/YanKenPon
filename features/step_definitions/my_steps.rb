@@ -3,12 +3,18 @@ Given(/^titulo$/) do
 end
 
 Then(/^debo ver "(.*?)"$/) do |arg1|
-    last_response.body.should =~ /#{arg1}/m
+	last_response.body.should =~ /#{arg1}/m
 end
 
 
-When(/^jugador(\d+) elige Piedra$/) do |jugador|
-     
+When(/^persona elige "(.*?)"$/) do |opcion|
+	fill_in("j1", :with => opcion)
 end
+
+When(/^computadora tira "(.*?)"$/) do |opcion|
+	@@juego.setjugador2 opcion
+	click_button("Jugar")
+end
+
 
 

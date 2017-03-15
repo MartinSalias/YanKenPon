@@ -9,14 +9,18 @@ end
 get '/inicio' do
 
   @@juego = Juego.new
-  @@juego.setjugador1("Y")
-  @@juego.setjugador2("Y")
-  
-  @seleccionj1 = @@juego.getjugador1
-  @seleccionj2 = @@juego.getjugador2
+  @seleccionj1 = ""
+  @seleccionj2 = ""
   @resultado = @@juego.mostrar
   
   erb :inicio
 end
 
+post '/inicio' do
+	@@juego.setjugador1(params['j1'])
+	@seleccionj1 = @@juego.getjugador1
+  @seleccionj2 = @@juego.getjugador2
+  @resultado = @@juego.mostrar
 
+	erb :inicio
+end

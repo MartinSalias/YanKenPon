@@ -5,14 +5,19 @@ Bienvenido a YanKenPon  <%= @nombre %>
 
 
 
-<form method="post" action="/play">
+<form method="post" action="/inicio" name="form1">
 
 <p>
-<input type="submit" value="jugador1"> Valor seleccionado J1:  <u> <%= @seleccionj1 %> </u>
+Ingrese valor <input type="text" name="j1">
+<p>
+
+
+<p>
+<input type="submit" value="Jugar"> 
 </p>
 
 <p>
-<input type="submit" value="jugador2"> Valor seleccionado J2:  <u> <%= @seleccionj2 %> </u>
+Valor seleccionado J2:  <u> <%= @seleccionj2 %> </u>
 </p>
 
 <p>
